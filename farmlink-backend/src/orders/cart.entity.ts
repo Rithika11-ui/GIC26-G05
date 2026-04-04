@@ -9,10 +9,10 @@ import {
   JoinColumn,
 } from 'typeorm';
 import { User } from '../users/user.entity';
-import { RewardTransaction } from './reward-transaction.entity';
+import { CartItem } from './cart-item.entity';
 
-@Entity('rewards')
-export class Reward {
+@Entity('carts')
+export class Cart {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -23,20 +23,8 @@ export class Reward {
   @Column({ name: 'consumer_id', unique: true })
   consumerId: string;
 
-  @Column({ name: 'points_balance', default: 0 })
-  pointsBalance: number;
-
-  @Column({ name: 'total_earned', default: 0 })
-  totalEarned: number;
-
-  @Column({ name: 'total_redeemed', default: 0 })
-  totalRedeemed: number;
-
-  @Column({ length: 50, default: 'bronze' })
-  tier: string;
-
-  @OneToMany(() => RewardTransaction, (tx) => tx.reward)
-  transactions: RewardTransaction[];
+  @OneToMany(() => CartItem, (item) => item.cart)
+  items: CartItem[];
 
   @CreateDateColumn({ name: 'created_at', type: 'timestamptz' })
   createdAt: Date;
