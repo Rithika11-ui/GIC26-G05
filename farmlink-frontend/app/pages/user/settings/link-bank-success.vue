@@ -4,7 +4,7 @@ definePageMeta({
 });
 
 useHead({
-  title: 'Link Bank Account | FarmLink Cambodia',
+  title: 'Bank Linked Successfully | FarmLink Cambodia',
   link: [
     {
       rel: 'stylesheet',
@@ -16,10 +16,6 @@ useHead({
     },
   ],
 });
-
-const goToSuccess = () => {
-  navigateTo('/user/settings/link-bank-success');
-};
 </script>
 
 <template>
@@ -113,87 +109,82 @@ const goToSuccess = () => {
           </div>
         </aside>
 
-        <section class="flex-1 space-y-10">
-          <header>
-            <span class="font-bold uppercase tracking-[0.15em] text-[#006e1c] text-[11px] mb-2 block">Financing Your Harvest</span>
-            <h1 class="font-[Manrope,sans-serif] text-5xl font-extrabold text-[#154212] tracking-tight">Link Bank Account</h1>
-            <p class="mt-4 text-[#42493e] text-lg max-w-xl leading-relaxed">Securely connect your Cambodian bank account to streamline your farm-to-table transactions and support local growers directly.</p>
-          </header>
-
-          <div class="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_300px] lg:grid-cols-[minmax(0,1fr)_320px] gap-8 items-start">
-            <div class="min-w-0 space-y-8">
-              <form class="space-y-6" @submit.prevent="goToSuccess">
-                <div class="space-y-2">
-                  <label class="text-sm font-bold text-[#42493e] ml-1">Bank Name</label>
-                  <div class="relative">
-                    <select class="w-full bg-[#e9e8e5] border-none rounded-lg py-4 px-4 appearance-none focus:ring-2 focus:ring-[#154212]/20 text-[#1b1c1a] font-medium">
-                      <option disabled selected value="">Select your local bank</option>
-                      <option>ABA Bank</option>
-                      <option>ACLEDA Bank</option>
-                      <option>Wing Bank</option>
-                      <option>Canadia Bank</option>
-                      <option>Sathapana Bank</option>
-                    </select>
-                    <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#72796e]">expand_more</span>
-                  </div>
+        <section class="flex-1 space-y-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            <div class="lg:col-span-7 bg-[#f5f3f0] rounded-2xl p-8 sm:p-10 relative overflow-hidden">
+              <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#006e1c]/5 rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%]"></div>
+              <div class="relative">
+                <div class="w-20 h-20 bg-[#006e1c] rounded-full flex items-center justify-center mb-6 shadow-xl shadow-[#006e1c]/20">
+                  <span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
                 </div>
+                <span class="text-xs font-bold uppercase tracking-widest text-[#006e1c] mb-2 block">Transaction Confirmed</span>
+                <h1 class="font-[Manrope,sans-serif] text-4xl sm:text-5xl font-extrabold text-[#154212] leading-tight mb-4">Bank Account Linked Successfully</h1>
+                <p class="text-[#42493e] leading-relaxed max-w-md">Your primary funding source has been securely verified. You can now use this account for instant farm-to-table transactions and seasonal harvest subscriptions.</p>
+              </div>
 
-                <div class="space-y-2">
-                  <label class="text-sm font-bold text-[#42493e] ml-1">Account Holder Name</label>
-                  <input class="w-full bg-[#e9e8e5] border-none rounded-lg py-4 px-4 focus:ring-2 focus:ring-[#154212]/20 text-[#1b1c1a] font-medium" placeholder="As it appears on your card" type="text" />
-                </div>
-
-                <div class="space-y-2">
-                  <label class="text-sm font-bold text-[#42493e] ml-1">Account Number</label>
-                  <input class="w-full bg-[#e9e8e5] border-none rounded-lg py-4 px-4 focus:ring-2 focus:ring-[#154212]/20 text-[#1b1c1a] font-medium" placeholder="000 000 000" type="text" />
-                </div>
-
-                <div class="pt-4">
-                  <button class="w-full py-4 bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white font-[Manrope,sans-serif] font-bold rounded-lg shadow-lg hover:shadow-xl transition-all active:scale-[0.99]" type="submit">
-                    Link Account Securely
-                  </button>
-                  <p class="text-center mt-4 text-xs text-[#42493e] font-medium">By linking your account, you agree to our Terms of Financial Service.</p>
-                </div>
-              </form>
+              <div class="flex flex-wrap gap-4 pt-8">
+                <NuxtLink to="/user/settings/payment" class="px-8 py-3.5 bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white rounded-lg font-[Manrope,sans-serif] font-bold text-sm flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
+                  <span>Back to Payments</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </NuxtLink>
+                <button class="px-8 py-3.5 border-[1.5px] border-[#154212]/20 text-[#154212] rounded-lg font-[Manrope,sans-serif] font-bold text-sm hover:bg-[#efeeea] transition-all" type="button">
+                  View Statements
+                </button>
+              </div>
             </div>
 
-            <div class="space-y-6 md:sticky md:top-28 md:justify-self-end md:w-full md:max-w-[300px] lg:max-w-[320px]">
-              <div class="bg-[#f5f3f0] p-6 rounded-xl border-l-4 border-[#006e1c] shadow-sm">
-                <div class="flex items-center gap-3 mb-3 text-[#006e1c]">
-                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lock</span>
-                  <span class="font-[Manrope,sans-serif] font-bold text-sm uppercase tracking-wider">Secure Verification</span>
+            <div class="lg:col-span-5 grid grid-rows-2 gap-6">
+              <div class="bg-white border border-[#c2c9bb]/20 p-7 rounded-2xl flex flex-col justify-center">
+                <h3 class="text-[10px] font-bold uppercase tracking-[0.15em] text-[#72796e] mb-6">Secured Account</h3>
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-[#563000]/10 rounded-lg flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[#563000]">account_balance</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-[#154212]">AgriBank Platinum</p>
+                    <p class="text-xs text-[#42493e]">Checking •••• 8829</p>
+                  </div>
                 </div>
-                <p class="text-sm text-[#42493e] leading-relaxed">
-                  Your bank details are protected by industry-leading 256-bit encryption. FarmLink Cambodia never stores your full banking credentials on our local servers.
-                </p>
               </div>
 
-              <div class="bg-[#efeeea] p-6 rounded-xl space-y-4">
-                <h4 class="font-[Manrope,sans-serif] font-bold text-[#154212]">Why link your bank?</h4>
-                <ul class="space-y-3">
-                  <li class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-[#006e1c] text-lg">bolt</span>
-                    <span class="text-sm text-[#42493e]">Instant payments for faster deliveries.</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-[#006e1c] text-lg">redeem</span>
-                    <span class="text-sm text-[#42493e]">Exclusive "Loyal Tiller" reward points.</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-[#006e1c] text-lg">receipt</span>
-                    <span class="text-sm text-[#42493e]">Direct digital tax receipts for every buy.</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="relative overflow-hidden rounded-xl h-48 group">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Market produce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDew-ujek9V9LwFWk8HsDAmZpxVhf_yIcUnc--XFelAMDyFhsFvTcT-s61jngjQ_HB23DpEklrRcBmZGVfMSa5cRFK261rIyU8e9bgscx58gZT-HKYPCxFeg9RV5hzflW3H1gAvrnbOMUXS_gZyymM3W9-QLpSpH7gnTM-wLVdcmCQhpLgy5652KVdpcJcjYmYBMqsRV3ujtgRsDlQiijWCyjijoys8_DSe9tyREZuJF9CEKqaYs703NsVJvWliAf0LnAD50GEznHY" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#154212]/80 to-transparent flex items-end p-4">
-                  <p class="text-white font-[Manrope,sans-serif] font-bold text-xs uppercase tracking-widest">Supporting Khmer Farmers</p>
+              <div class="rounded-2xl overflow-hidden relative group">
+                <img
+                  alt="Lush green fields"
+                  class="w-full h-full object-cover grayscale-[20%] group-hover:scale-110 transition-transform duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKbxdfc0qai-uP7ashRtVCe7vRjS1F-dLenp76NZypOaeEf32OmUiuX107Z6esbPTUnIj4bImbxzzgi-kLH8j79BrHceiz5dKEX8ki17ehHQ3boo0kDQ_e3B5i--YOFPfZWvwnzgJJHi7GlyFKhrvDWrJSU2Ez-GYQDcqGI00xtnaKj1ccACjmu9tsNYjnUCgia1VwxBqPYDt8MtfvDkWTdhnmkkhpBO9nr7IIwmuZAogQD8ZMSWNjEoX3eaFXMJu3CVa5X6nFR70"
+                />
+                <div class="absolute inset-0 bg-[#154212]/20 mix-blend-multiply"></div>
+                <div class="absolute bottom-4 left-4 right-4 p-4 bg-white/10 backdrop-blur rounded-lg border border-white/20">
+                  <p class="text-[10px] text-white/90 uppercase tracking-widest font-bold">The Grower's Trust</p>
+                  <p class="text-xs text-white/80 italic">Supporting local soil since 1994.</p>
                 </div>
               </div>
             </div>
           </div>
+
+          <section>
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="font-[Manrope,sans-serif] text-xl font-bold text-[#154212]">Explore Your Ecosystem</h2>
+              <div class="h-px flex-grow mx-6 bg-[#c2c9bb]/40"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-[#efeeea] p-6 rounded-xl hover:bg-[#e9e8e5] transition-colors cursor-pointer group">
+                <span class="material-symbols-outlined text-[#006e1c] mb-4 group-hover:scale-110 transition-transform block">eco</span>
+                <h4 class="font-bold text-[#154212] mb-2">Setup Subscriptions</h4>
+                <p class="text-xs text-[#42493e]">Automate your weekly organic veggie basket delivery.</p>
+              </div>
+              <div class="bg-[#efeeea] p-6 rounded-xl hover:bg-[#e9e8e5] transition-colors cursor-pointer group">
+                <span class="material-symbols-outlined text-[#563000] mb-4 group-hover:scale-110 transition-transform block">assignment_ind</span>
+                <h4 class="font-bold text-[#154212] mb-2">Farmer Profiles</h4>
+                <p class="text-xs text-[#42493e]">Meet the growers behind your recent purchases.</p>
+              </div>
+              <div class="bg-[#efeeea] p-6 rounded-xl hover:bg-[#e9e8e5] transition-colors cursor-pointer group">
+                <span class="material-symbols-outlined text-[#154212] mb-4 group-hover:scale-110 transition-transform block">verified_user</span>
+                <h4 class="font-bold text-[#154212] mb-2">Security Hub</h4>
+                <p class="text-xs text-[#42493e]">Manage your biometrics and transaction limits.</p>
+              </div>
+            </div>
+          </section>
         </section>
       </div>
     </main>
@@ -201,9 +192,7 @@ const goToSuccess = () => {
     <footer class="w-full py-12 px-8 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-[#efeeea] bg-[#efeeea] mt-auto">
       <div class="space-y-6">
         <span class="text-lg font-black text-[#154212] font-[Manrope,sans-serif] uppercase tracking-tight">Farm Link</span>
-        <p class="text-[#5a5b58] text-sm max-w-sm leading-relaxed">
-          Empowering the soil-keepers of Cambodia through transparent commerce and direct-to-consumer sustainability.
-        </p>
+        <p class="text-[#5a5b58] text-sm max-w-sm leading-relaxed">Empowering the soil-keepers of Cambodia through transparent commerce and direct-to-consumer sustainability.</p>
         <p class="text-xs text-[#5a5b58] opacity-75">© 2024 FarmLink Cambodia. Sourced from the soil of Cambodia.</p>
       </div>
 
