@@ -91,10 +91,10 @@ useHead({
                 Purchase History
               </a>
 
-              <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
+              <NuxtLink to="/user/settings/address" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
                 <span class="material-symbols-outlined text-[20px]">location_on</span>
                 Addresses
-              </a>
+              </NuxtLink>
 
               <NuxtLink to="/user/settings/payment" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
                 <span class="material-symbols-outlined text-[20px]">payments</span>
