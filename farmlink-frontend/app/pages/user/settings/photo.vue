@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CommonAppSidebar from '../../../../components/common/AppSidebar.vue';
 definePageMeta({
   layout: 'user',
 });
@@ -51,47 +52,10 @@ useHead({
       </div>
     </nav>
 
-    <div class="pt-24 flex min-h-[calc(100vh-96px)]">
-      <aside class="w-72 bg-stone-100 p-6 border-r border-transparent">
-        <div class="mb-8 px-2">
-          <h2 class="text-lg font-bold text-emerald-900 font-[Manrope,sans-serif]">Profile Settings</h2>
-          <p class="text-xs text-stone-500 font-medium">Manage your agrarian identity</p>
-        </div>
+    <div class="pt-24 flex flex-col md:flex-row min-h-[calc(100vh-96px)] gap-8 md:gap-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <CommonAppSidebar active="edit" />
 
-        <nav class="flex flex-col gap-1">
-          <a class="flex items-center gap-3 px-4 py-3 bg-white text-emerald-900 rounded-xl shadow-sm font-semibold" href="#">
-            <span class="material-symbols-outlined text-[20px]">person</span>
-            <span class="text-sm">Personal Info</span>
-          </a>
-          <a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-stone-200/50 rounded-xl font-semibold" href="#">
-            <span class="material-symbols-outlined text-[20px]">lock</span>
-            <span class="text-sm">Security</span>
-          </a>
-          <a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-stone-200/50 rounded-xl font-semibold" href="#">
-            <span class="material-symbols-outlined text-[20px]">notifications</span>
-            <span class="text-sm">Notifications</span>
-          </a>
-          <a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-stone-200/50 rounded-xl font-semibold" href="#">
-            <span class="material-symbols-outlined text-[20px]">photo_library</span>
-            <span class="text-sm">Photo Gallery</span>
-          </a>
-          <a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-stone-200/50 rounded-xl font-semibold" href="#">
-            <span class="material-symbols-outlined text-[20px]">link</span>
-            <span class="text-sm">Linked Accounts</span>
-          </a>
-        </nav>
-
-        <div class="mt-8">
-          <NuxtLink
-            to="/user/settings/edit"
-            class="block w-full text-center py-3 px-4 text-xs font-bold tracking-wider uppercase text-emerald-900 border border-emerald-900/20 rounded-xl hover:bg-emerald-900/5 transition-colors"
-          >
-            Back to Edit Profile
-          </NuxtLink>
-        </div>
-      </aside>
-
-      <main class="flex-1 p-10 overflow-y-auto bg-stone-50/50 relative">
+      <main class="flex-1 p-10 overflow-y-auto bg-stone-50/50 relative rounded-2xl">
         <div class="absolute inset-0 bg-stone-900/10 z-10" />
 
         <div class="max-w-4xl mx-auto space-y-10 relative z-0">

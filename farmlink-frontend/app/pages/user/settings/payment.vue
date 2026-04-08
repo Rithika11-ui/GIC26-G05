@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CommonAppSidebar from '../../../../components/common/AppSidebar.vue';
 import { ref } from 'vue';
 
 definePageMeta({
@@ -65,53 +66,7 @@ const isRemoveCardModalOpen = ref(false);
 
     <main class="max-w-7xl mx-auto w-full pt-28 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8 flex-1">
       <div class="flex flex-col md:flex-row gap-8 md:gap-10">
-        <aside class="w-full lg:w-[280px] shrink-0">
-          <div class="bg-white rounded-2xl border border-zinc-200 p-5 sm:p-6 shadow-sm">
-            <div class="flex items-center gap-3 mb-5">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA83x8AHQV-oGz8CINH3SrXquf2gJKH9G9CVM3OVmDN3cB3DlMZ8OKkFiQ6GOy52l0KObZYfls2JxyvOI98GKD7NfFwfqx0DFo0t-2YFkuLovUIbiufm26ot4sXnGGxIM2IhJDVGlcryJSFSWwtSvjU_kM5Ukd7XLzqRh0TtvXigMvcnSSB_3sieWsfz6wndum2oJtb1LLll8OD48U8SyMvtpcYou8NOZi9JGGjQyxIbbVWefdH5bFmPhCa9meAhjW2CO_fJBhigk"
-                alt="User avatar"
-                class="w-14 h-14 rounded-full object-cover"
-              />
-              <div>
-                <h3 class="font-[Manrope,sans-serif] text-2xl leading-none font-extrabold text-zinc-900">Sophal Saman</h3>
-                <p class="text-sm text-zinc-500 font-medium mt-1">Premium Member</p>
-              </div>
-            </div>
-
-            <nav class="space-y-2">
-              <a href="/user/settings/profile" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
-                <span class="material-symbols-outlined text-[20px]">person</span>
-                Profile Info
-              </a>
-
-                <a href="/user/settings/edit" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
-                <span class="material-symbols-outlined text-[20px]">edit</span>
-                Edit Profile
-              </a>
-
-              <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
-                <span class="material-symbols-outlined text-[20px]">receipt_long</span>
-                Purchase History
-              </a>
-
-              <NuxtLink to="/user/settings/address" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
-                <span class="material-symbols-outlined text-[20px]">location_on</span>
-                Addresses
-              </NuxtLink>
-
-                <a href="/user/settings/payment" class="flex items-center gap-3 bg-[#1f7a2e] text-white px-4 py-3 rounded-xl text-[15px] font-bold tracking-wide uppercase shadow-md">
-                <span class="material-symbols-outlined text-[20px]">payments</span>
-                Payment Methods
-              </a>
-
-              <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
-                <span class="material-symbols-outlined text-[20px]">chat</span>
-                Chat
-              </a>
-            </nav>
-          </div>
-        </aside>
+        <CommonAppSidebar active="payment" />
 
         <section class="flex-1 space-y-12">
           <header>
@@ -281,3 +236,4 @@ const isRemoveCardModalOpen = ref(false);
   font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
 }
 </style>
+
