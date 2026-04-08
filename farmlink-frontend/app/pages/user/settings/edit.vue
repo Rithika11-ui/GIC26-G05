@@ -60,7 +60,7 @@ useHead({
     </nav>
 
     <main class="max-w-7xl mx-auto w-full pt-28 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8 flex-1">
-      <div class="flex flex-col lg:flex-row gap-8 lg:gap-10">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-10">
         <aside class="w-full lg:w-[280px] shrink-0">
           <div class="bg-white rounded-2xl border border-zinc-200 p-5 sm:p-6 shadow-sm">
             <div class="flex items-center gap-3 mb-5">
@@ -96,10 +96,10 @@ useHead({
                 Addresses
               </a>
 
-              <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
+              <NuxtLink to="/user/settings/payment" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
                 <span class="material-symbols-outlined text-[20px]">payments</span>
                 Payment Methods
-              </a>
+              </NuxtLink>
 
               <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-zinc-700 hover:bg-zinc-100 text-[15px] font-bold tracking-wide uppercase transition-colors">
                 <span class="material-symbols-outlined text-[20px]">chat</span>
