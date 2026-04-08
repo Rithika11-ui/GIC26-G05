@@ -1,0 +1,107 @@
+<template>
+  <header class="bg-cream w-full header-height flex items-center px-8 shadow-sm">
+    <div class="container mx-auto flex items-center justify-between">
+      
+      <div class="flex-shrink-0">
+        <NuxtLink to="/">
+          <img 
+            alt="Farm Link Logo" 
+            class="h-16 w-auto object-contain" 
+            src="https://lh3.googleusercontent.com/aida/ADBb0uhni3CwKaQP_0YGcMW1Xv4XJwx1i-Tv9h91apgs26EWpeFy1g_W6E-OCoX8SmxqAdGtLWyb2aDgu_whdvk4Y3WFlQ05UlQUuORPVRfE3g7VadYtIS8YtXN0c2A9R2m2eoywY8VT2Ec51DML6XivZTG_1pqhtdP8ZBDScbR2lFSYHu3Zhvd-OcO5042N-DZ8bpw2-pTSl8NrH7dPhNYP5s6_3BjrrNmTkMFkCuQyur9-k41npTHiZ9n6GzqY7YeH7KEHMZF06VLZxg"
+          />
+        </NuxtLink>
+      </div>
+
+      <nav class="hidden lg:flex items-center space-x-8">
+        <NuxtLink 
+          to="/" 
+          class="bg-primary-yellow px-6 py-2 rounded-full border-2 border-black nav-link uppercase text-xs"
+        >
+          Home
+        </NuxtLink>
+
+        <div class="flex items-center space-x-1 cursor-pointer group">
+          <span class="nav-link uppercase text-xs">Product</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+          </svg>
+        </div>
+
+        <div class="flex items-center space-x-1 cursor-pointer group">
+          <span class="nav-link uppercase text-xs">Farm</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+          </svg>
+        </div>
+
+        <NuxtLink to="/about" class="nav-link uppercase text-xs">About</NuxtLink>
+        <NuxtLink to="/contacts" class="nav-link uppercase text-xs">Contacts</NuxtLink>
+      </nav>
+
+      <div class="flex items-center space-x-6">
+        <div class="relative search-container">
+          <input 
+            type="text"
+            class="w-full bg-transparent border-2 border-black rounded-full py-2 px-6 focus:outline-none focus:ring-0 search-input" 
+            placeholder="Search..." 
+          />
+          <button class="absolute right-4 top-1/2 -translate-y-1/2">
+            <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex items-center space-x-5 text-black">
+          <button aria-label="Bookmarks">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" stroke="currentColor" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+          </button>
+          <button aria-label="Shopping Cart">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+
+        <button class="bg-primary-yellow px-8 py-3 rounded-full border-2 border-black nav-link uppercase text-xs shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-0.5 active:translate-y-1 transition-all">
+          Shop Now
+        </button>
+
+        <button class="w-12 h-12 rounded-full bg-primary-yellow border-2 border-black flex items-center justify-center overflow-hidden">
+          <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</template>
+
+<style scoped>
+/* Scoped ensures these styles don't leak to other components */
+.bg-cream {
+  background-color: #FFF7DA;
+}
+.bg-primary-yellow {
+  background-color: #EFCF4F;
+}
+.header-height {
+  height: 100px;
+}
+.search-container {
+  width: 320px;
+}
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.05em;
+}
+.search-input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+  font-style: italic;
+}
+</style>
