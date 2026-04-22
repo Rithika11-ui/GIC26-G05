@@ -20,18 +20,61 @@
           Home
         </NuxtLink>
 
-        <div class="flex items-center space-x-1 cursor-pointer group">
-          <span class="nav-link uppercase text-xs">Product</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-          </svg>
+        <div class="relative" id="product-menu">
+          <button @click.stop="toggleProduct" class="flex items-center space-x-1 cursor-pointer group focus:outline-none">
+            <span class="nav-link uppercase text-xs">Product</span>
+            <svg :class="{ 'rotate-180': productOpen }" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+          </button>
+
+          <div v-show="productOpen" class="absolute left-0 mt-3 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+            <div class="p-3 border-b">
+              <div class="text-xs font-bold text-gray-700">Categories:</div>
+              <ul class="mt-2">
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Vegetables</NuxtLink></li>
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Fruits</NuxtLink></li>
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Seeds & Seedlings</NuxtLink></li>
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Tools & Equipment</NuxtLink></li>
+              </ul>
+            </div>
+            <div class="p-3">
+              <div class="text-xs font-bold text-gray-700">Popular:</div>
+              <ul class="mt-2">
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Best Sellers</NuxtLink></li>
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">New Arrivals</NuxtLink></li>
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Discounted</NuxtLink></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div class="flex items-center space-x-1 cursor-pointer group">
-          <span class="nav-link uppercase text-xs">Farm</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-          </svg>
+        <div class="relative" id="farm-menu">
+          <button @click.stop="toggleFarm" class="flex items-center space-x-1 cursor-pointer group focus:outline-none">
+            <span class="nav-link uppercase text-xs">Farm</span>
+            <svg :class="{ 'rotate-180': farmOpen }" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+          </button>
+
+          <div v-show="farmOpen" class="absolute left-0 mt-3 w-56 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+            <div class="p-3 border-b">
+              <div class="text-xs font-bold text-gray-700">Farm Near You:</div>
+              <ul class="mt-2">
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Farm 1</NuxtLink></li>
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Farm 2</NuxtLink></li>
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Farm 3</NuxtLink></li>
+              </ul>
+            </div>
+            <div class="p-3">
+              <div class="text-xs font-bold text-gray-700">Recommending Farm:</div>
+              <ul class="mt-2">
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Farm 4</NuxtLink></li>
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Farm 5</NuxtLink></li>
+                <li><NuxtLink to="#" class="block px-2 py-1 hover:bg-gray-100">Farm 6</NuxtLink></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <NuxtLink to="/about" class="nav-link uppercase text-xs">About</NuxtLink>
@@ -78,6 +121,33 @@
     </div>
   </header>
 </template>
+
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+const farmOpen = ref(false)
+const productOpen = ref(false)
+
+const toggleFarm = () => {
+  farmOpen.value = !farmOpen.value
+  if (farmOpen.value) productOpen.value = false
+}
+
+const toggleProduct = () => {
+  productOpen.value = !productOpen.value
+  if (productOpen.value) farmOpen.value = false
+}
+
+const onClickOutside = (e) => {
+  const farmEl = document.getElementById('farm-menu')
+  const productEl = document.getElementById('product-menu')
+  if (farmEl && !farmEl.contains(e.target)) farmOpen.value = false
+  if (productEl && !productEl.contains(e.target)) productOpen.value = false
+}
+
+onMounted(() => document.addEventListener('click', onClickOutside))
+onBeforeUnmount(() => document.removeEventListener('click', onClickOutside))
+</script>
 
 <style scoped>
 /* Scoped ensures these styles don't leak to other components */

@@ -1,8 +1,8 @@
 <template>
   <footer class="w-full bg-cream border-t border-black/5" data-purpose="footer-container">
-    <div class="max-w-[1920px] mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-start" data-purpose="footer-flex-container">
+    <div class="max-w-[1920px]  px-[100px] py-8 flex flex-col md:flex-row justify-between items-start" data-purpose="footer-flex-container">
       
-      <div class="flex flex-col gap-8 w-full md:max-w-[300px]">
+      <div class="flex flex-col gap-5 w-full md:max-w-[300px] ml-10">
         <NuxtLink to="/">
           <img 
             alt="FarmLink Logo" 
@@ -11,13 +11,13 @@
           />
         </NuxtLink>
         
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-3">
           <h3 class="footer-heading italic uppercase">Subscribe</h3>
           <p class="footer-text">Get 10% off with your first order</p>
           <div class="relative w-full max-w-[280px]">
             <input 
               type="email"
-              class="w-full bg-transparent border-2 border-black rounded-xl py-2.5 px-4 pr-12 footer-text focus:outline-none focus:ring-0" 
+              class="w-full bg-transparent border-2 border-black rounded-md py-2.5 px-4 pr-12 footer-text focus:outline-none focus:ring-0" 
               placeholder="Enter your email" 
             />
             <button class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center justify-center hover:scale-110 transition-transform">
@@ -29,9 +29,9 @@
 
       <div class="flex flex-col md:flex-row gap-12 lg:gap-[93px] mt-12 md:mt-0">
         
-        <div class="flex flex-col gap-6 min-w-[150px]">
+        <div class="flex flex-col gap-3 min-w-[150px]">
           <h3 class="footer-heading italic uppercase">Support</h3>
-          <ul class="flex flex-col gap-4 footer-text">
+          <ul class="flex flex-col gap-3 footer-text">
             <li>Techno, Phnom Penh Cambodia</li>
             <li>
               <a class="hover:underline font-bold" href="mailto:farmLink168@gmail.com">farmLink168@gmail.com</a>
@@ -42,9 +42,9 @@
           </ul>
         </div>
 
-        <div class="flex flex-col gap-6 min-w-[150px]">
+        <div class="flex flex-col gap-3 min-w-[150px]">
           <h3 class="footer-heading italic uppercase">Account</h3>
-          <ul class="flex flex-col gap-4 footer-text">
+          <ul class="flex flex-col gap-3 footer-text">
             <li><NuxtLink class="hover:underline" to="/account">My account</NuxtLink></li>
             <li><NuxtLink class="hover:underline" to="/login">Login / Sign up</NuxtLink></li>
             <li><NuxtLink class="hover:underline" to="/cart">Cart</NuxtLink></li>
@@ -53,9 +53,9 @@
           </ul>
         </div>
 
-        <div class="flex flex-col gap-6 min-w-[150px]">
+        <div class="flex flex-col gap-3 min-w-[150px]">
           <h3 class="footer-heading italic uppercase">Quick Link</h3>
-          <ul class="flex flex-col gap-4 footer-text">
+          <ul class="flex flex-col gap-3 footer-text">
             <li><NuxtLink class="hover:underline" to="/privacy">Privacy policy</NuxtLink></li>
             <li><NuxtLink class="hover:underline" to="/terms">Term of Use</NuxtLink></li>
             <li><NuxtLink class="hover:underline" to="/faq">FAQ</NuxtLink></li>
@@ -63,13 +63,24 @@
           </ul>
         </div>
 
-        <div class="flex flex-col gap-6 min-w-[150px]">
-          <h3 class="footer-heading italic uppercase">Socials</h3>
-          <div class="flex items-center gap-6">
-            <a v-for="social in socials" :key="social.name" :href="social.link" class="hover:scale-110 transition-transform text-black">
-              <div v-html="social.svg" class="w-6 h-6"></div>
-            </a>
+        <div class="flex flex-col gap-3 min-w-[150px]">
+          <h3 class="footer-heading italic uppercase">Download App</h3>
+          <p class="footer-text">Save 20% off on 3 purchase in App <br> User only</p>
+          <div class="flex items-start gap-4">
+            <img :src="qrApp" alt="QR code" class="w-30 h-30 object-contain" />
+
+            <div class="flex flex-col gap-2">
+              <img :src="googlePlay" alt="Get it on Google Play" class="w-30 object-contain" />
+              <img :src="appStore" alt="Download on the App Store" class="w-30 object-contain" />
+            </div>
           </div>
+            <div class="flex items-center gap-4">
+              <a v-for="social in socials" :key="social.name" :href="social.link" class="hover:scale-110 transition-transform text-black">
+                <div v-html="social.svg" class="w-6 h-6"></div>
+              </a>
+            </div>
+            
+          
         </div>
       </div>
     </div>
@@ -81,6 +92,10 @@
 </template>
 
 <script setup>
+import qrApp from '~/assets/images/qrapp.png'
+import googlePlay from '~/assets/images/googleplay.png'
+import appStore from '~/assets/images/appstore.png'
+
 const socials = [
   { name: 'Facebook', link: '#', svg: '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>' },
   { name: 'Twitter', link: '#', svg: '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>' },
