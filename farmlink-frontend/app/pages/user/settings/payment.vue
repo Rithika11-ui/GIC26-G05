@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CommonAppSidebar from '../../../../components/common/AppSidebar.vue';
+import CommonAppSidebar from '../../../components/common/AppSidebar.vue';
 import { ref } from 'vue';
 
 definePageMeta({
