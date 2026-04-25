@@ -8,19 +8,15 @@ definePageMeta({
 
 useHead({
   title: 'Payment Methods | FarmLink Cambodia',
-  link: [
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap',
-    },
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap',
-    },
-  ],
 });
 
 const isRemoveCardModalOpen = ref(false);
+const selectedCardLast4 = ref('');
+
+function openRemoveCardModal(last4: string) {
+  selectedCardLast4.value = last4;
+  isRemoveCardModalOpen.value = true;
+}
 </script>
 
 <template>
@@ -121,7 +117,7 @@ const isRemoveCardModalOpen = ref(false);
                   </div>
                   <div class="flex gap-4">
                     <NuxtLink class="text-primary text-xs font-bold hover:underline" to="/user/settings/edit-payment">Edit</NuxtLink>
-                    <button type="button" class="text-[#ba1a1a] text-xs font-bold hover:underline" @click="isRemoveCardModalOpen = true">
+                    <button type="button" class="text-[#ba1a1a] text-xs font-bold hover:underline" @click="openRemoveCardModal('4110')">
                       Remove
                     </button>
                   </div>
@@ -189,7 +185,7 @@ const isRemoveCardModalOpen = ref(false);
           </div>
           <h3 class="font-[Manrope,sans-serif] text-[1.55rem] font-bold text-on-surface mb-3 leading-tight">Remove Payment Method?</h3>
           <p class="text-on-surface-variant font-body leading-relaxed mb-8 max-w-[18rem] mx-auto">
-            Are you sure you want to remove this card ending in <span class="font-bold text-on-surface">4242</span>? This action will disconnect this source from future FarmLink purchases.
+            Are you sure you want to remove this card ending in <span class="font-bold text-on-surface">{{ selectedCardLast4 }}</span>? This action will disconnect this source from future FarmLink purchases.
           </p>
           <div class="flex flex-col gap-3">
             <button class="w-full py-4 bg-[#563000] text-on-tertiary font-bold rounded-lg hover:brightness-110 transition-all shadow-sm">

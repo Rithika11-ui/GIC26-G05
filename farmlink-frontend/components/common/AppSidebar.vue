@@ -28,7 +28,7 @@ const menuItems: Array<{
 		<div class="bg-white rounded-2xl border border-zinc-200 p-5 sm:p-6 shadow-sm">
 			<div class="flex items-center gap-3 mb-5">
 				<img
-					src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA83x8AHQV-oGz8CINH3SrXquf2gJKH9G9CVM3OVmDN3cB3DlMZ8OKkFiQ6GOy52l0KObZYfls2JxyvOI98GKD7NfFwfqx0DFo0t-2YFkuLovUIbiufm26ot4sXnGGxIM2I2HJDVGlcryJSFSWwtSvjU_kM5Ukd7XLzqRh0TtvXigMvcnSSB_3sieWsfz6wndum2oJtb1LLll8OD48U8SyMvtpcYou8NOZi9JGGjQyxIbbVWefdH5bFmPhCa9meAhjW2CO_fJBhigk"
+					src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA83x8AHQV-oGz8CINH3SrXquf2gJKH9G9CVM3OVmDN3cB3DlMZ8OKkFiQ6GOy52l0KObZYfls2JxyvOI98GKD7NfFwfqx0DFo0t-2YFkuLovUIbiufm26ot4sXnGGxIM2IhJDVGlcryJSFSWwtSvjU_kM5Ukd7XLzqRh0TtvXigMvcnSSB_3sieWsfz6wndum2oJtb1LLll8OD48U8SyMvtpcYou8NOZi9JGGjQyxIbbVWefdH5bFmPhCa9meAhjW2CO_fJBhigk"
 					alt="User avatar"
 					class="w-14 h-14 rounded-full object-cover"
 				/>
