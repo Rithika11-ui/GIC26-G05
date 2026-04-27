@@ -45,21 +45,21 @@
         <div class="flex flex-col gap-3 min-w-[150px]">
           <h3 class="footer-heading italic uppercase">Account</h3>
           <ul class="flex flex-col gap-3 footer-text">
-            <li><NuxtLink class="hover:underline" to="/account">My account</NuxtLink></li>
-            <li><NuxtLink class="hover:underline" to="/login">Login / Sign up</NuxtLink></li>
-            <li><NuxtLink class="hover:underline" to="/cart">Cart</NuxtLink></li>
-            <li><NuxtLink class="hover:underline" to="/favorites">Favorite</NuxtLink></li>
-            <li><NuxtLink class="hover:underline" to="/shop">Shop</NuxtLink></li>
+            <li><NuxtLink class="hover:underline" to="/user/settings/profile">My account</NuxtLink></li>
+            <li><NuxtLink class="hover:underline" to="/auth/signin">Login / Sign up</NuxtLink></li>
+            <li><NuxtLink class="hover:underline" to="/user/cart">Cart</NuxtLink></li>
+            <li><NuxtLink class="hover:underline" to="/user/favorites">Favorite</NuxtLink></li>
+            <li><NuxtLink class="hover:underline" to="/user/products">Shop</NuxtLink></li>
           </ul>
         </div>
 
         <div class="flex flex-col gap-3 min-w-[150px]">
           <h3 class="footer-heading italic uppercase">Quick Link</h3>
           <ul class="flex flex-col gap-3 footer-text">
-            <li><NuxtLink class="hover:underline" to="/privacy">Privacy policy</NuxtLink></li>
-            <li><NuxtLink class="hover:underline" to="/terms">Term of Use</NuxtLink></li>
-            <li><NuxtLink class="hover:underline" to="/faq">FAQ</NuxtLink></li>
-            <li><NuxtLink class="hover:underline" to="/contact">Contact</NuxtLink></li>
+            <li><NuxtLink class="hover:underline" to="/about">Privacy policy</NuxtLink></li>
+            <li><NuxtLink class="hover:underline" to="/shipping">Term of Use</NuxtLink></li>
+            <li><NuxtLink class="hover:underline" to="/about#faq">FAQ</NuxtLink></li>
+            <li><NuxtLink class="hover:underline" to="/contacts">Contact</NuxtLink></li>
           </ul>
         </div>
 
