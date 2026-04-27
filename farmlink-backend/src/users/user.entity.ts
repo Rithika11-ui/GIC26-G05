@@ -47,7 +47,7 @@ export class User {
   @Column({ name: 'avatar_url', length: 500, nullable: true })
   avatarUrl: string;
 
-  @Column({ name: 'language_pref', length: 5, default: 'km' })
+  @Column({ name: 'language_pref', length: 5, default: 'kh' })
   languagePref: string;
 
   @CreateDateColumn({ name: 'created_at', type: 'timestamptz' })
