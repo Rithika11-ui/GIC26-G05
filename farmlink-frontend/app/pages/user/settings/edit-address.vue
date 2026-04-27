@@ -11,44 +11,7 @@ useHead({
 
 <template>
   <div class="min-h-screen flex flex-col bg-[#fbf9f6] text-zinc-900">
-    <nav class="fixed top-0 z-50 w-full bg-[#f5f1e6] border-b border-zinc-200/70">
-      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-        <div class="flex items-center gap-3">
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxOVR_zyChQjJtpsz7uv6I95KZvXXMjdfhytppn0wii18iFOb85phtM6Me-Wq3F8rDH7KgRDh9ogSDlko0dxBiPcN3qVrhoLFXTG5GuYaVt05jNPcxWW12g7R9SnCr59Li2JIk2040vUdxOGHqHRlCeTc0WFN5koj8Y1cyRBd25JUuv7eamJG-EMr7Z4T4c3Hp9NtjqSvBoyma4cWZJxxQSKSZRKvtn56kwAmf27B7nViVqPc5vC2557SJdMeVhgzwu25O1U1P1pQ"
-            alt="FarmLink logo"
-            class="h-10"
-          />
-          <div class="hidden sm:block">
-            <p class="text-sm font-black text-[#154212] leading-tight tracking-tight uppercase">Farm Link</p>
-            <p class="text-[9px] text-zinc-500 font-bold uppercase tracking-[0.12em]">Farm & Agri-Business Services</p>
-          </div>
-        </div>
-
-        <div class="hidden lg:flex items-center gap-6">
-          <a href="#" class="bg-[#e9c46a] text-black font-extrabold text-[11px] tracking-wider px-4 py-1.5 rounded-full border border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)] uppercase">Home</a>
-          <a href="#" class="text-[11px] font-bold tracking-wider uppercase">Services</a>
-          <a href="#" class="text-[11px] font-bold tracking-wider uppercase">Pages</a>
-          <a href="#" class="text-[11px] font-bold tracking-wider uppercase">Shop</a>
-          <a href="#" class="text-[11px] font-bold tracking-wider uppercase">Contacts</a>
-        </div>
-
-        <div class="flex items-center gap-3 sm:gap-4">
-          <button class="hidden md:inline-flex text-zinc-800">
-            <span class="material-symbols-outlined">bookmark</span>
-          </button>
-          <button class="hidden md:inline-flex text-zinc-800">
-            <span class="material-symbols-outlined">shopping_cart</span>
-          </button>
-          <button class="bg-[#e9c46a] px-4 sm:px-5 py-2 rounded-full border border-black text-[11px] font-extrabold uppercase tracking-wider shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
-            Shop Now
-          </button>
-          <button class="bg-[#e9c46a] p-1.5 rounded-full border border-black shadow-[1px_1px_0_0_rgba(0,0,0,1)]">
-            <span class="material-symbols-outlined text-black">person</span>
-          </button>
-        </div>
-      </div>
-    </nav>
+    <CommonAppHeader />
 
     <main class="max-w-7xl mx-auto w-full pt-28 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8 flex-1">
       <div class="flex flex-col md:flex-row gap-8 md:gap-10">
@@ -167,40 +130,6 @@ useHead({
       </div>
     </main>
 
-    <footer class="bg-[#efeeea] py-12 px-8 border-t border-[#c2c9bb]/10">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-        <div class="space-y-4">
-          <span class="text-xl font-black text-[#154212] uppercase tracking-widest">FarmLink</span>
-          <p class="text-sm text-[#42493e] max-w-xs">Cultivating direct connections between Cambodian agrarian heritage and modern culinary standards.</p>
-        </div>
-        <div class="flex gap-12">
-          <div class="space-y-3">
-            <p class="text-xs font-bold uppercase tracking-widest text-[#154212]">Support</p>
-            <ul class="text-sm text-[#42493e] space-y-2">
-              <li><a class="hover:text-[#006e1c] transition-colors" href="#">Help Center</a></li>
-              <li><a class="hover:text-[#006e1c] transition-colors" href="#">Delivery FAQ</a></li>
-            </ul>
-          </div>
-          <div class="space-y-3">
-            <p class="text-xs font-bold uppercase tracking-widest text-[#154212]">Connect</p>
-            <ul class="text-sm text-[#42493e] space-y-2">
-              <li><a class="hover:text-[#006e1c] transition-colors" href="#">Instagram</a></li>
-              <li><a class="hover:text-[#006e1c] transition-colors" href="#">Facebook</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-[#c2c9bb]/20">
-          <p class="text-xs font-bold text-[#563000] uppercase mb-2">Need Harvest Help?</p>
-          <p class="text-sm font-bold text-[#154212]">+855 23 987 654</p>
-        </div>
-      </div>
-      <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-[#c2c9bb]/10 flex justify-between items-center text-[10px] font-medium text-[#72796e] uppercase tracking-[0.2em]">
-        <span>© 2024 FarmLink Cambodia. All Rights Reserved.</span>
-        <div class="flex gap-6">
-          <a class="hover:text-[#154212] transition-colors" href="#">Privacy</a>
-          <a class="hover:text-[#154212] transition-colors" href="#">Terms</a>
-        </div>
-      </div>
-    </footer>
+    <CommonAppFooter />
   </div>
 </template>

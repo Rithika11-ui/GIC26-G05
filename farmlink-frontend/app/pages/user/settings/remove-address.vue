@@ -11,44 +11,7 @@ useHead({
 
 <template>
   <div class="min-h-screen flex flex-col bg-[#fbf9f6] text-zinc-900">
-    <nav class="fixed top-0 z-50 w-full bg-[#f5f1e6] border-b border-zinc-200/70">
-      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-        <div class="flex items-center gap-3">
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxOVR_zyChQjJtpsz7uv6I95KZvXXMjdfhytppn0wii18iFOb85phtM6Me-Wq3F8rDH7KgRDh9ogSDlko0dxBiPcN3qVrhoLFXTG5GuYaVt05jNPcxWW12g7R9SnCr59Li2JIk2040vUdxOGHqHRlCeTc0WFN5koj8Y1cyRBd25JUuv7eamJG-EMr7Z4T4c3Hp9NtjqSvBoyma4cWZJxxQSKSZRKvtn56kwAmf27B7nViVqPc5vC2557SJdMeVhgzwu25O1U1P1pQ"
-            alt="FarmLink logo"
-            class="h-10"
-          />
-          <div class="hidden sm:block">
-            <p class="text-sm font-black text-[#154212] leading-tight tracking-tight uppercase">Farm Link</p>
-            <p class="text-[9px] text-zinc-500 font-bold uppercase tracking-[0.12em]">Farm & Agri-Business Services</p>
-          </div>
-        </div>
-
-        <div class="hidden lg:flex items-center gap-6">
-          <a href="#" class="bg-[#e9c46a] text-black font-extrabold text-[11px] tracking-wider px-4 py-1.5 rounded-full border border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)] uppercase">Home</a>
-          <a href="#" class="text-[11px] font-bold tracking-wider uppercase">Services</a>
-          <a href="#" class="text-[11px] font-bold tracking-wider uppercase">Pages</a>
-          <a href="#" class="text-[11px] font-bold tracking-wider uppercase">Shop</a>
-          <a href="#" class="text-[11px] font-bold tracking-wider uppercase">Contacts</a>
-        </div>
-
-        <div class="flex items-center gap-3 sm:gap-4">
-          <button class="hidden md:inline-flex text-zinc-800">
-            <span class="material-symbols-outlined">bookmark</span>
-          </button>
-          <button class="hidden md:inline-flex text-zinc-800">
-            <span class="material-symbols-outlined">shopping_cart</span>
-          </button>
-          <button class="bg-[#e9c46a] px-4 sm:px-5 py-2 rounded-full border border-black text-[11px] font-extrabold uppercase tracking-wider shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
-            Shop Now
-          </button>
-          <button class="bg-[#e9c46a] p-1.5 rounded-full border border-black shadow-[1px_1px_0_0_rgba(0,0,0,1)]">
-            <span class="material-symbols-outlined text-black">person</span>
-          </button>
-        </div>
-      </div>
-    </nav>
+    <CommonAppHeader />
 
     <main class="max-w-7xl mx-auto w-full pt-28 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8 flex-1">
       <div class="flex flex-col md:flex-row gap-8 md:gap-10">

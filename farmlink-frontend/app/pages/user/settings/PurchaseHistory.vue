@@ -14,14 +14,7 @@
             </div>
           </div>
 
-          <nav class="w-full space-y-2">
-            <a v-for="item in navItems" :key="item.name" href="#" 
-               class="flex items-center gap-3 px-6 py-4 rounded-2xl font-bold text-sm transition-all"
-               :class="item.active ? 'bg-[#0a4d1e] text-white shadow-lg shadow-green-900/10' : 'text-gray-400 hover:text-[#0a4d1e] hover:bg-gray-50'">
-              <component :is="item.icon" class="w-5 h-5" />
-              {{ item.name }}
-            </a>
-          </nav>
+          <CommonAppHeader />
         </div>
       </aside>
 
